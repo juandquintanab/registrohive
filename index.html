@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro UCAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <span class="logo-mark">◎</span>
+        <span class="logo-text">Proyecto UCAB</span>
+      </div>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#formulario-registro">Registro</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / portada -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <h1>Registro de Estudiantes</h1>
+          <p>
+            Este espacio está diseñado para recopilar información básica de estudiantes 
+            interesados en participar en nuestras actividades, proyectos y programas internos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiénes somos -->
+    <section id="quienes-somos" class="section">
+      <div class="container section-content">
+        <header>
+          <h2>Quiénes somos</h2>
+        </header>
+        <article>
+          <p>
+            Somos un equipo de estudiantes y profesionales comprometidos con el crecimiento 
+            académico, humano y profesional dentro de la comunidad universitaria. 
+            Desarrollamos iniciativas, actividades y programas que buscan conectar a las 
+            personas, abrir oportunidades y crear experiencias significativas dentro y fuera del campus.
+          </p>
+          <p>
+            Este formulario nos permite conocer mejor a quienes desean sumarse a nuestras 
+            propuestas, colaborar en proyectos o simplemente mantenerse informados sobre 
+            las próximas actividades. Puedes editar este texto luego para adaptarlo mejor 
+            a la identidad de tu proyecto o grupo.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Formulario -->
+    <section id="formulario-registro" class="section section-form">
+      <div class="container section-content">
+        <header>
+          <h2>Formulario de registro</h2>
+          <p>Completa todos los campos para enviar tu registro.</p>
+        </header>
+
+        <form
+          id="registro-ucab"
+          method="POST"
+          action="https://formspree.io/f/xdkqdnnq"
+        >
+          <!-- Nombre completo -->
+          <div class="form-group">
+            <label for="nombre_completo">Nombre completo</label>
+            <input
+              type="text"
+              id="nombre_completo"
+              name="nombre_completo"
+              required
+            />
+          </div>
+
+          <!-- Cédula -->
+          <div class="form-group">
+            <label for="cedula">Cédula</label>
+            <input
+              type="text"
+              id="cedula"
+              name="cedula"
+              required
+            />
+          </div>
+
+          <!-- Correo electrónico -->
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              required
+            />
+          </div>
+
+          <!-- Teléfono -->
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+            />
+          </div>
+
+          <!-- Carrera -->
+          <div class="form-group">
+            <label for="carrera">Carrera</label>
+            <select id="carrera" name="carrera" required>
+              <option value="" disabled selected>Selecciona tu carrera</option>
+              <option>Administración de Empresas</option>
+              <option>Contaduría Pública</option>
+              <option>Educación</option>
+              <option>Psicología</option>
+              <option>Comunicación Social</option>
+              <option>Derecho</option>
+              <option>Filosofía</option>
+              <option>Letras</option>
+              <option>Sociología</option>
+              <option>Relaciones Industriales</option>
+              <option>Ingeniería Industrial</option>
+              <option>Ingeniería Civil</option>
+              <option>Ingeniería Informática</option>
+              <option>Ingeniería en Telecomunicaciones</option>
+              <option>Mecatrónica</option>
+              <option>Teología</option>
+              <option>Arquitectura</option>
+            </select>
+          </div>
+
+          <!-- Semestre -->
+          <div class="form-group">
+            <label for="semestre">Semestre</label>
+            <select id="semestre" name="semestre" required>
+              <option value="" disabled selected>Selecciona tu semestre</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+
+          <!-- Beneficiario de programa de apoyo económico -->
+          <fieldset class="form-group">
+            <legend>Beneficiario de programa de apoyo económico</legend>
+            <div class="radio-group">
+              <label>
+                <input
+                  type="radio"
+                  name="apoyo_economico"
+                  value="Sí"
+                  required
+                />
+                Sí
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="apoyo_economico"
+                  value="No"
+                  required
+                />
+                No
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Botón + estado -->
+          <div class="form-footer">
+            <button type="submit" id="submit-btn">Enviar registro</button>
+            <p id="form-status" class="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2025 Proyecto UCAB — Puedes editar este texto libremente.</p>
+    </div>
+  </footer>
+</body>
+</html>
